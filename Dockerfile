@@ -3,7 +3,7 @@ FROM quay.io/jupyter/base-notebook:latest
 # Install system packages (optional)
 USER root
 RUN apt-get update && \
-    apt-get install -y gmsh && \
+    apt-get install -y gmsh texlive texlive-latex-extra texlive-fonts-recommended dvipng cm-super && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Remobe default work dir
