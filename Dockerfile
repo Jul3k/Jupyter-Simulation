@@ -13,7 +13,7 @@ RUN rm -rf /home/jovyan/work
 USER $NB_UID
 
 # Install Python packages
-RUN pip install --no-cache-dir numpy pandas matplotlib scikit-learn pygmsh control jupyterlab_rise ipympl sympy scipy scikit-fem[all]
+RUN pip install --no-cache-dir latex numpy pandas matplotlib scikit-learn pygmsh control jupyterlab_rise ipympl sympy scipy scikit-fem[all]
 
 COPY --chown=${NB_USER}:${NB_USER} ./Vorlesung ${HOME}/Vorlesung
 
